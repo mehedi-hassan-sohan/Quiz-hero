@@ -186,4 +186,4 @@ document.querySelector("#submit").addEventListener("click",  () => {
     clearTimeout(x);
   }, 1500);
   window.scrollTo(0, 0);
-});
+}); 
