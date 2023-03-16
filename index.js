@@ -9,7 +9,7 @@ let startQuiz = document.querySelector("#startQuiz");
 let rulesContainer = document.querySelector("#rulesContainer");
 let alertContainer = document.querySelector("#alertContainer");
 let submitContainer = document.querySelector("#submitContainer");
-let quizContainer = document.querySelector("#quizContainer");
+let quizContainer = document.getElementById("quizContainer");
 let answersContainer = document.querySelector("#answersContainer");
 let displayResult = document.querySelector("#displayResult");
 
@@ -58,11 +58,13 @@ const displayQuiz = (data) => {
     return;
   }
 
+  let quizHTML = ""; // Accumulate the HTML strings in this variable
+
   data.forEach((quiz, i) => {
-    quizContainer.innerHTML = `<div class="m-3 py-3 px-4 shadow-sm rounded">
+    quizHTML += `<div class="m-3 py-3 px-4 shadow-sm rounded">
   <div class="flex items-center">
     <div class="h-8 w-8 bg-green-300 rounded-full flex justify-center items-center text-green-800 mr-3">
-      ${i + 1}
+      ${i+1}
     </div>
     <p class="text-gray-800 text-sm">${quiz.question}</p>
   </div>
@@ -71,10 +73,12 @@ const displayQuiz = (data) => {
   </div>
 </div>`;
   });
+  quizContainer.innerHTML = quizHTML;
 };
 
+
 // EventListener for quiz submit button
-document.querySelector("#submit").addEventlistener("click",  () => {
+document.querySelector("#submit").addEventListener("click",  () => {
   if (answers.length < 6) {
     return;
   }
