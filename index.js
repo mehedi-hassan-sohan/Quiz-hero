@@ -5,7 +5,7 @@ let quizData;
 let answers = [];
 
 // Dom elements called
-let startQuiz = document.querySelector("#startQuiz");
+ let startQuiz = document.querySelector("#startQuiz");
 let rulesContainer = document.querySelector("#rulesContainer");
 let alertContainer = document.querySelector("#alertContainer");
 let submitContainer = document.querySelector("#submitContainer");
