@@ -11,7 +11,7 @@ let alertContainer = document.querySelector("#alertContainer");
 let submitContainer = document.querySelector("#submitContainer");
 let quizContainer = document.getElementById("quizContainer");
 let answersContainer = document.querySelector("#answersContainer");
-let displayResult = document.querySelector("#displayResult");
+ let displayResult = document.querySelector("#displayResult");
 
 // EventListener for quiz start button
 startQuiz.addEventListener("click", () => {
